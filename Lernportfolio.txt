@@ -1,0 +1,9 @@
+
+Lernportfolio:
+
+Es gab keine größeren Hürden beim Programmieren der Anwendung.
+Außer:
+Das ich nicht ganz verstehe wie ich das Model View Presenter Prinzip umsetzte und es deshalb weg gelassen habe.
+Es ist sehr ungewohnt javascript zu verwenden wenn man sich an typescript gewöhnt hat.
+Und ich hatte Probleme damit das Backend auf dem Webserver der HTW zu erreichen.
+

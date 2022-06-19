@@ -1,0 +1,9 @@
+{
+  "name": "PWA-DEMO",
+  "short_name": "PWA-DEMO",
+  "lang": "de-DE",
+  "start_url": "index.html",
+  "display": "fullscreen",
+  "theme_color": "#e30613",
+  "background_color": "#ffffff"
+}

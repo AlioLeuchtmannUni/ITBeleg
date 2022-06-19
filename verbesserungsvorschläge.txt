@@ -1,0 +1,17 @@
+
+
+Verbesserungsvorschläge:
+
+
+Frontend:
+- ordentliche Architektur für das Script
+- alle Fragen am anfang zu Fetchen wäre für große Datensätze schlecht
+bietet aber den Vorteil das die Anwendung nach einer anfänglichen Request offline laufe kann.
+Bis auf die Fragen Erstellungs Funktionalität.
+
+Backend:
+- FileService nicht static & einlesen des JsonFiles einmal im Constructor
+-> verwaltung im Hauptspeicher wenn nicht zu groß
+-> Speichern parallel zum ändern des Hauptspeicherobjektes (muss nicht warten bis gespeichert)
+-> somit kann der Dateizugriff ordentlich serialisiert werden und das Hinzufügen an sich geht aus Sicht der Anwendung schneller
+- Nutzersystem implementieren, aktuell gibt es keine Nutzer

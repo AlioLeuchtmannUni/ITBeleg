@@ -1,0 +1,17 @@
+{
+  "teil-mathe":[
+    {"a":"x^2+x^2","l":["2x^2","2x^2","2x^2","2x^2"]},
+    {"a":"x^2*x^2","l":["x^4","x^4","x^4","x^4"]},
+    {"a":"x^12*x","l":["x^13","x^13","x^13","x^13"]},
+    {"a":"3+4","l":["7","7","7","7"]},
+    {"a":"sin(12.3)","l":["hypotenuse","hypotenuse","hypotenuse","hypotenuse"]},
+    {"a":"x*x*x","l":["x^3","x^3","x^3","x^3"]},
+    {"a":"x+2=0","l":["-2","-2","-2","-2"]},
+    {"a":"x^2*x^13","l":["x^14","x^14","x^14","x^14"]},
+    {"a":"x^2","l":["x^2","x^2","x^2","x^2"]},
+    {"a":"3","l":["3","3","3","3"]},
+    {"a":"67","l":["46","46","46","46"]},
+    {"a":"7*3*4*5 +2","l":["422","422","422","422"]}],
+  "teil-internettechnologien":[{"a":"Lieblingsfach ?","l":["Internettechnologien","Internettechnologien","Internettechnologien","Internettechnologien"]},{"a":"Welche Authentifizierung bietet HTTP","l":["Digest Access Authentication","Digest Access Authentication","Digest Access Authentication","Digest Access Authentication"]},{"a":"Welches Transportprotokoll eignet sich für zeitkritische �bertragungen","l":["UDP","UDP","UDP","UDP"]}],
+  "teil-allgemein":[{"a":"Karl der Große, Geburtsjahr ?","l":["747","747","747","747"]},{"a":"Ronnie Coleman ist ?","l":["Body builder","Body builder","Body builder","Body builder"]},{"a":"Apple ist ?","l":["schlechter","schlechter","schlechter","schlechter"]},{"a":"Eifelturm steht in","l":["Paris","Paris","Paris","Paris"]},{"a":"Montenegro liegt in ?","l":["Europa","Europa","Europa","Europa"]}]
+}

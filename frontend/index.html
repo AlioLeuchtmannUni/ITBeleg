@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <link rel="manifest" href="manifest.webmanifest" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="ROBOTS" content="INDEX, FOLLOW"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB" crossorigin="anonymous">
+    <link rel="manifest" href="/manifest.json">
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js" integrity="sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p" crossorigin="anonymous"></script>
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <script type="text/javascript" src="sw.js"></script>
+    <script>
+        // Service Worker registrieren für PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(reg => console.log(reg))
+                .catch(err => console.log(err));
+        }
+    </script>
+
+</head>
+
+
+<header>
+    <div class="header">
+        Welcome to the Quizz
+    </div>
+</header>
+
+<body onload="presenter.initialize()">
+
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="buttonBar">
+            <div class="dropdown">
+                <div>Quiz</div>
+                <div class="dropdown-content" id="categoryDropdown">
+                </div>
+            </div>
+            <div onclick="presenter.setState(2)">Fortschritt</div>
+            <div onclick="presenter.setState(4)">Erstelle Aufgaben</div>
+        </div>
+    </div>
+
+
+    <!-- Landing Page -->
+    <div class="landingDiv" id="landingDiv">
+        <div>Wählen sie eine der Kategorien um zu beginnen.</div>
+    </div>
+
+
+    <!-- quiz Part -->
+    <div class="quizContainer" id="quizContainer">
+
+        <div class="aufgabeContainer" id="aufgabeContainer"></div>
+
+        <div class="answerContainer" id="answerContainer">
+        </div>
+    </div>
+
+
+    <!-- Dashboard part-->
+    <div class="dashboard" id="dashboard">
+        <div class="dashboardCategory" id="dashboardCategory"></div>
+        <div class="dashboardScore" id="dashboardScore"></div>
+        <div id="nextButton" class="nextButton" onclick="presenter.setState(0)">Go Again !</div>
+    </div>
+
+
+    <!-- Progress Container Part -->
+    <div id="progressContainer" class="progressContainer"></div>
+
+
+    <!-- creation Form-->
+    <div class="quizCreationFormContainer" id="quizCreationFormContainer">
+        <div class="categoryRow" id="categoryRow"></div>
+        <div class="formGroup">
+            <label class="inputLabel">Neue Kategorie:</label>
+            <input type="text" id="categoryInput" class="customInput"></input>
+        </div>
+        <div class="formGroup">
+            <label class="inputLabel">Frage:</label>
+            <input type="text" id="questionInput" class="customInput"></input>
+        </div>
+        <div class="formGroup">
+            <label class="inputLabel">Lösung:</label>
+            <input type="text" id="answerInput1" class="customInput"></input>
+        </div>
+        <div class="formGroup">
+            <label class="inputLabel">Alternative1:</label>
+            <input type="text" id="answerInput2" class="customInput"></input>
+        </div>
+        <div class="formGroup">
+            <label class="inputLabel">Alternative2:</label>
+            <input type="text" id="answerInput3" class="customInput"></input>
+        </div>
+        <div class="formGroup">
+            <label class="inputLabel">Alternative3:</label>
+            <input type="text" id="answerInput4" class="customInput"></input>
+        </div>
+        <div style="display:flex; justify-content:center; flex-direction:row;">
+            <button class="submitButton" type="submit" onclick="presenter.saveQuestion()">Save</button>
+        </div>
+
+        <div id="snackBar" class="snackBar"></div>
+    </div>
+</body>
+
+<footer class="footer">
+    Created by Alio Leuchtmann
+</footer>
+
+</html>

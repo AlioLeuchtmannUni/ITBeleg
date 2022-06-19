@@ -1,0 +1,374 @@
+.header {
+    padding: 2%;
+    text-align: center;
+    background: rgba(255, 0, 0, 0.3);
+    color: white;
+    font-size: calc(4*(1vw + 1vh) / 2);
+    border-radius: 5px;
+}
+
+body {
+    background-color: Black;
+    color: white;
+    height: 100%;
+}
+
+footer {
+    width: 100%;
+    height: 2.5rem;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.landingDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10%;
+    text-align: center;
+    font-size: calc(3*(1vw + 1vh) / 2);
+}
+
+.buttonBar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.buttonBar>* {
+    padding: 1%;
+    display: block;
+    width: 100%;
+    border-right: 1px solid rgba(255, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+    font-size: calc(3*(1vw + 1vh) / 2);
+    text-align: center;
+    border-radius: 10px;
+}
+
+@media only screen and (max-device-width: 40em) {
+    .buttonBar {
+        flex-direction: column;
+    }
+
+    .landingDiv{
+        font-size: calc(8*(1vw + 1vh) / 2);
+    }
+
+    .header{
+        font-size: calc(8*(1vw + 1vh) / 2);
+    }
+
+    .buttonBar>* {
+        font-size: calc(6*(1vw + 1vh) / 2);
+    }
+
+    .dropdown-content div{
+        background-color: black;
+    }
+
+}
+
+.buttonBar>*:hover {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+.quizContainer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border-radius: 5px;
+}
+
+.quizContainer>* {
+    padding: 1%;
+}
+
+.aufgabeContainer {
+    text-align: center;
+    font-size: calc(4*(1vw + 1vh) / 2);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 10px;
+    margin: 1%;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.answerContainer {
+    text-align: center;
+    font-size: calc(3*(1vw + 1vh) / 2);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 10px;
+    margin: 1%;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.answerContainer>* {
+    padding: 1%;
+    border: 1px rgba(255, 0, 0, 0.3);
+}
+
+.answerContainer>*:hover {
+    background-color: rgba(255, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.nextButton {
+    color: white;
+}
+
+.nextButton:hover {
+    background-color: rgba(255, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.dashboard {
+    color: white;
+    font-size: calc(3*(1vw + 1vh) / 2);
+    text-align: center;
+    border: 1px rgba(255, 0, 0, 0.3);
+}
+
+.progressContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid white;
+    margin: 2%;
+    padding: 1%;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.categoryHeader {
+    font-size: calc(5*(1vw + 1vh) / 2);
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: center;
+}
+
+.divider {
+    color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.statQuestionItem {
+    font-size: calc(4*(1vw + 1vh) / 2);
+    padding: 3px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.statisticCategoryContainer {
+    margin: 1%;
+    padding: 1%;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.itemCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+/* DROPDOWN STUFF*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    /* hide first*/
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-content div {
+    color: white;
+    padding: 2%;
+    display: block;
+}
+
+.dropdown-content div:hover {
+    background-color: rgba(255, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.formGroup {
+    margin: 1%;
+    font-size: calc(1*(1vw + 1vh) / 2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    padding: 5px;
+}
+
+.inputLabel {
+    color: black;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: calc(2*(1vw + 1vh) / 2);
+    padding: 5px;
+}
+
+.customInput {
+    box-shadow: 0 0 4px;
+    font-size: calc(2*(1vw + 1vh) / 2);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.categoryRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.categoryChoiceItem {
+    font-size: calc(2*(1vw + 1vh) / 2);
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    margin: 5px;
+    padding: 5px;
+}
+
+.categoryChoiceItem:hover {
+    background-color: rgba(255, 150, 150, 0.7);
+}
+
+.submitButton {
+    font-size: calc(2*(1vw + 1vh) / 2);
+}
+
+.footer{
+    font-size: calc(2*(1vw + 1vh) / 2);
+}
+
+
+/* https://www.w3schools.com/howto/howto_js_snackbar.asp  */
+/* The snackbar - position it at the bottom and in the middle of the screen */
+.snackBar {
+    color: red;
+    display: none;
+    visibility: hidden;
+    /* Hidden by default. Visible on click */
+    min-width: 250px;
+    /* Set a default minimum width */
+    margin-left: -125px;
+    /* Divide value of min-width by 2 */
+    background-color: #333;
+    /* Black background color */
+    color: #fff;
+    /* White text color */
+    text-align: center;
+    /* Centered text */
+    border-radius: 2px;
+    /* Rounded borders */
+    padding: 16px;
+    /* Padding */
+    position: fixed;
+    /* Sit on top of the screen */
+    z-index: 1;
+    /* Add a z-index if needed */
+    left: 50%;
+    /* Center the snackbar */
+    bottom: 30px;
+    /* 30px from the bottom */
+}
+
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+
+.show {
+    color: white;
+    background-color: green;
+    display: block;
+    border: 1 px solid white;
+    visibility: visible;
+    text-align: center;
+    border-radius: 15px;
+    /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+
+/* Animations to fade the snackbar in and out */
+
+
+/* Animations to fade the snackbar in and out */
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
